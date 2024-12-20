@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "23427dc2-efc0-46cc-9858-50a590e33b1c",
+      "name": "online_retail.csv"
+    },
+    "batch_definition": {
+      "id": "3729d6a8-77a0-4888-b732-5736cd8d3b62",
+      "name": "my_batch_definition"
+    },
+    "datasource": {
+      "id": "6f5ab226-1c63-4ed6-aa08-75d85a37febf",
+      "name": "my_filesystem_data_source"
+    }
+  },
+  "id": "1a07eaa9-aba1-40fb-8542-040744e21179",
+  "name": "my_validation_definition",
+  "suite": {
+    "id": "fca97560-8e8d-4213-b83d-bf8cef90b8e1",
+    "name": "my_expectation_suite"
+  }
+}

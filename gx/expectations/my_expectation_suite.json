@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "id": "e75744a1-5264-42a4-a967-c67c3615d1e0",
+      "kwargs": {
+        "column": "StockCode",
+        "regex": "^\\d{5}[A-Za-z]$"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "268f2c4f-fdfe-4588-9b6e-7729a346e8d5",
+      "kwargs": {
+        "column": "Description"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "98c8596b-459f-477d-a69a-822c8f394490",
+      "kwargs": {
+        "column": "Date",
+        "type_": "datetime64"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "0c6dbb14-5b48-4041-96c1-6a4725d07d9d",
+      "kwargs": {
+        "column": "UnitPrice",
+        "min_value": 0.0,
+        "strict_min": true
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "650408e5-1e1c-4856-aa24-1a687d56be43",
+      "kwargs": {
+        "column": "CustomerID"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "c0bd4e8a-f188-456a-a74a-6935cc715b65",
+      "kwargs": {
+        "column": "CustomerID",
+        "type_": "int"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "e51d7124-0b89-4ac2-ad48-ba7aa634b61e",
+      "kwargs": {
+        "column": "CustomerID",
+        "min_value": 0.0,
+        "strict_min": true
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "6d0dd546-fd2b-4f2e-af60-ef15e792b325",
+      "kwargs": {
+        "column": "InvoiceNo",
+        "regex": "^C?\\d{6}$"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "e8b3f24f-83f5-497a-a4ea-0704d3b263b8",
+      "kwargs": {
+        "column": "Quantity",
+        "condition_parser": "pandas",
+        "min_value": 0.0,
+        "row_condition": "~InvoiceNo.str.startswith(\"C\")"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "91eb5296-61e8-4640-a6ad-60c6f290d0f9",
+      "kwargs": {
+        "column": "Quantity",
+        "condition_parser": "pandas",
+        "max_value": -1.0,
+        "row_condition": "InvoiceNo.str.startswith(\"C\")"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "fca97560-8e8d-4213-b83d-bf8cef90b8e1",
+  "meta": {
+    "great_expectations_version": "1.2.6"
+  },
+  "name": "my_expectation_suite",
+  "notes": null
+}
